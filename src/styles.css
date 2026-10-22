@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url("@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2")
+    format("woff2");
+}
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --color-butter: #f9eaaa;
+  --color-rose: #f5d4cf;
+  --color-sage: #dbe8ce;
+  --color-sky: #d4e7f3;
+  --color-lavender: #e4dcf3;
+  --color-forest: #345c49;
+}
+@layer base {
+  :root {
+    @apply font-sans font-normal text-[#303c36] antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply m-0 min-w-[1000px];
+  }
+  button {
+    @apply cursor-pointer border-0 transition-[background,box-shadow,transform] duration-150 hover:brightness-[.97] active:translate-y-px disabled:cursor-default disabled:opacity-50 motion-reduce:transition-none;
+  }
+  button,
+  a,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-2 outline-offset-4 outline-[#315f4b];
+  }
+  button svg {
+    @apply shrink-0;
+  }
+  kbd {
+    @apply rounded-[3px] border border-[#cbd4c1] bg-white/25 px-1 py-px font-sans text-[10px] whitespace-nowrap;
+  }
+}

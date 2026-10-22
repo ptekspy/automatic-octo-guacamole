@@ -1,0 +1,10 @@
+export const MAX_NOTES = 1000;
+export const MAX_TEXT_LENGTH = 10000;
+export const MIN_NOTE_SIZE = { width: 180, height: 160 } as const;
+export const DEFAULT_NOTE_SIZE = { width: 270, height: 250 } as const;
+export const SNAPSHOT_VERSION = 1;
+export const LOCAL_STORAGE_KEY = "little-notes:v1";
+export const MOCK_STORAGE_KEY = "little-notes:mock-server:v1";
+export const LOCAL_SAVE_DELAY = 150;
+export const LOCAL_SAVE_MAX_WAIT = 1000;
+export const REMOTE_SAVE_DELAY = 500;
